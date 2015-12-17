@@ -5,7 +5,7 @@ html {
   box-sizing: inherit;
 }
 body{
-	background-color: #fff;
+	background-color: #333;
 	font-family: 'Maven Pro', sans-serif;
 }
 .mainwrap{
@@ -66,9 +66,38 @@ a:link, a:visited{
 	color:#fff;
 	font-weight: 700;
 }
+.navbar-nav .open .dropdown-menu>li>a{
+	color:#fff;
+}
+.navbar-nav .open .dropdown-menu>li>a:focus, .navbar-nav .open .dropdown-menu>li>a:hover{
+	color:#000;
+}
+
+#intro{
+	background-color: #fff;
+	width:100%;
+	min-height:200px;
+	text-align: center;
+}
+
+#intro>p{
+	margin-top:-10px;
+	font-size: 1.5em;
+	font-weight:600;
+	padding: 0px 10px;
+}
+#intro>p:first-child{
+	margin-top: 0px;
+	font-size: 3em;
+}
+#intro>p:last-child{
+	margin-top:-8px;
+	font-size:1.04em;
+	color: #666;
+}
 
 .showcase{
-	height:400px;
+	height:250px;
 	background-color: #333;
 	margin:0px;
 	overflow:hidden;
@@ -99,9 +128,9 @@ a:link, a:visited{
 	color: #fff;
 	opacity: 0.7;
 	position: absolute;
-	top: 300px;
+	top: 150px;
 	height: auto;
-	min-height: 100px;
+	height: 100px;
 	width:100%;
 	padding: 5px 10px;
 	font-size: 1.2em;
@@ -126,15 +155,42 @@ a:link, a:visited{
 	display: none;
 }
 
+@media (min-width: 335px){
+	#intro>p:first-child{
+		font-size: 4em;
+		font-weight:500;
+	}
+}
 @media (min-width: 450px){
+	#intro>p:first-child{
+		font-size: 5em;
+	}
 	.showcase img{
 		margin-left: -150px;
+	}
+	.showcase{
+		height:300px;
+	}
+	.textover{
+		top:200px;
+	}
+}
+
+@media (min-width: 500px){
+	#intro>p:first-child{
+		font-size: 6em;
 	}
 }
 
 @media (min-width: 600px){
 	.showcase img{
 		margin-left:0px;
+	}
+	.showcase{
+		height:400px;
+	}
+	.textover{
+		top:300px;
 	}
 }
 
